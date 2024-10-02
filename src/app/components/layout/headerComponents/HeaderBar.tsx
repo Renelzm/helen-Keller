@@ -6,6 +6,7 @@ import Image from "next/image";
 import { NavigationBar } from "./NavigationBar";
 import { useAppSelector } from '@/store';
 import Link from 'next/link';
+import { useMediaQuery } from "@mantine/hooks";
 
 
 type Props = {
@@ -19,6 +20,7 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const isDark = colorScheme === "dark";
   const nombre = useAppSelector((state) => state.AppState.nombreInstitucion)
+  const isXs = useMediaQuery("(max-width: 576px)");
   return (
     <>
     <AppShell.Header >
@@ -30,9 +32,9 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
         >
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color="white" />
      
-        <Image onClick={toggleDesk} src={`/helen-keller/bwlog.png`} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
+        <Image onClick={toggleDesk} src={`/helen-keller/59e76b0d8c18a.png`} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
         <Link href={'/'}>
-        <Title order={3} c="#effee7" td="underline" fw={900} visibleFrom="sm">{nombre}</Title>
+        <Title order={isXs ? 5 : 3} c="#effee7" td="underline" fw={900} >{nombre}</Title>
         </Link> 
   
         <ActionIcon
