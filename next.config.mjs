@@ -2,6 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
+    output: 'export',
     experimental: {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },
