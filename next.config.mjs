@@ -11,6 +11,8 @@ const nextConfig = {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },
     images: {
+      loader: "custom",
+      loaderFile: './ImageLoader.js',
     remotePatterns: [
       {
         protocol: 'https',
