@@ -127,7 +127,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
         size="xl"
         label={
           <Image
-            src="/uno_logo_blanco.png"
+            src="/helen-keller/uno_logo_blanco.png"
             alt=""
             width={40}
             height={30}
