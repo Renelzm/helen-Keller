@@ -3,7 +3,7 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-    basePath: isProd ? '/renelzm.github.io' : '',
+    basePath: isProd ? '/helen-keller' : '',
     reactStrictMode: true,
     swcMinify: true,
     output: 'export',
