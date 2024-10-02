@@ -35,7 +35,7 @@ export const SectionMarket = () => {
       </div>
     </div>
     <div>
-      <Image className="bg-cover rounded-xl" src="/unoi-img.jpg" alt="" width={700} height={50} />
+      <Image className="bg-cover rounded-xl" src="/helen-keller/unoi-img.jpg" alt="" width={700} height={50} />
     </div>
   </div>
 

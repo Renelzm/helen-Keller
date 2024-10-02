@@ -58,11 +58,11 @@ const initialState: GeneralAppState = {
     nombreInstitucion: 'CE Helen Keller',
     banners: [
       {
-        nombreArchivo: 'bannerhellenkeller2.jpg',
+        nombreArchivo: 'helen-keller/bannerhellenkeller2.jpg',
         alt: 'Bienvenida a estudiantes'
       },
       {
-        nombreArchivo: 'bannerhellenkeller.jpg',
+        nombreArchivo: 'helen-keller/bannerhellenkeller.jpg',
         alt: 'Bienvenida a estudiantes'
       }
   ],
@@ -70,7 +70,7 @@ const initialState: GeneralAppState = {
     {
       title: 'Preescolar',
       description: 'Somos un segundo hogar para sus hijos, ofreciéndole un ambiente seguro y agradable en el que se desarrollan, crecen y disfrutan aprender.',
-      image: '/kinder.jpg',
+      image: '/helen-keller/kinder.jpg',
       to: "/preescolar",
       color: '#47ab8d',
       documents: documents,
@@ -78,7 +78,7 @@ const initialState: GeneralAppState = {
     {
       title: 'Primaria',
       description: 'Contamos con recursos de última generación, a través de diversas metodologías sobre un ambiente bilingüe en donde adquieren el conocimientos y el idioma mediante la vivencia diaria',
-      image: '/primaria.jpg',
+      image: '/helen-keller/primaria.jpg',
       to: "/primaria",
       color: '#ffab09',
       documents: documents,
@@ -87,7 +87,7 @@ const initialState: GeneralAppState = {
     {
       title: 'Secundaria',
       description: 'Buscamos crear estudiantes capaces de aportar al mundo soluciones con niveles educativos necesarios para su excelente desempeño',
-      image: '/secundaria.jpg',
+      image: '/helen-keller/secundaria.jpg',
       to: "/secundaria",
       color: '#f01879',
       documents: documents,
