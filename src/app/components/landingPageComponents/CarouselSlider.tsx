@@ -12,13 +12,18 @@ export const CarouselSlider = () => {
     <>
      { banners?.length != 0 ? 
      
-     <Container  size="90%">
+     <Container  size="70%">
 
     <Carousel  withIndicators align={'center'}>
+      <Carousel.Slide>
+      <Image src={`https://si.nccdn.net/page_images/children_crafting-1920x948.jpg`} 
+        alt={' banner.alt'} width={400} height={300}   style={{ border: '5px solid black' }}
+        />
+    </Carousel.Slide>
       { banners!.map( banner => 
       <Carousel.Slide key={banner.nombreArchivo}>
       <Image src={`/${banner.nombreArchivo}`} 
-        alt={ banner.alt}
+        alt={ banner.alt} width={400} height={300} style={{ border: '5px solid gray' }} 
         />
     </Carousel.Slide>
 

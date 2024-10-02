@@ -26,13 +26,14 @@ export const NavigationBar = () => {
       }}
       >
       <Tabs.List justify="center">
-        
+      <Link href={"/preescolar"}>
         <Tabs.Tab
           value="Preescolar"
           leftSection={<IconPackages style={{ color: "#47ab8d" }} />}
         >
           <Title order={3}>Preescolar</Title>
         </Tabs.Tab>
+        </Link>
         <Link href={"/primaria"}>
         <Tabs.Tab 
         value="Primaria"
@@ -40,11 +41,13 @@ export const NavigationBar = () => {
           <Title order={3}>Primaria</Title>
         </Tabs.Tab>
           </Link>
+          <Link href={"/secundaria"}>
         <Tabs.Tab 
         value="Secundaria"
         leftSection={<IconBooks style={{color:"#f01879"}}/>}>
           <Title order={3}>Secundaria</Title>
         </Tabs.Tab>
+        </Link>
       </Tabs.List>
     </Tabs>
           </Container>

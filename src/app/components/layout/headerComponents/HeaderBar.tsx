@@ -5,6 +5,7 @@ import { IconMoonFilled, IconSun } from "@tabler/icons-react";
 import Image from "next/image";
 import { NavigationBar } from "./NavigationBar";
 import { useAppSelector } from '@/store';
+import Link from 'next/link';
 
 
 type Props = {
@@ -20,17 +21,19 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
   const nombre = useAppSelector((state) => state.AppState.nombreInstitucion)
   return (
     <>
-    <AppShell.Header>
+    <AppShell.Header >
       <Group
         h="100%"
         px="md"
-        className={isDark ? "bg-yellow-600" : "bg-green-700" }
+        className={`${isDark ? "bg-yellow-600" : "bg-green-700"}`}
         style={{ position: "relative"}}
         >
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
      
         <Image onClick={toggleDesk} src={"/bwlog.png"} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
+        <Link href={'/'}>
         <Title order={3} c="#effee7" td="underline" fw={900} visibleFrom="sm">{nombre}</Title>
+        </Link> 
   
         <ActionIcon
           variant="outline"

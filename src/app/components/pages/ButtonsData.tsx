@@ -1,63 +1,68 @@
-'use client'
-import { useAppSelector } from '@/store';
-import { IconArticle, IconSchool, IconWritingSign } from '@tabler/icons-react';
+"use client";
+import React from "react";
+import { isValidElement } from "react";
+import { useAppSelector } from "@/store";
+import { Button, Title } from "@mantine/core";
+
 
 interface Props {
-    param: string;
+  param: string;
 }
 
-export const ButtonsData = ({param}:Props) => {
-      const niveles = useAppSelector( (state) => state.AppState.niveles)
-      const data = niveles.find( nivel => nivel.title.toLowerCase() === param.toLowerCase())
+const iconStyle: React.CSSProperties = {
+    width: 80,
+    height: 60,
+}
+
+export const ButtonsData = ({ param }: Props) => {
+  const niveles = useAppSelector((state) => state.AppState.niveles);
+  const data = niveles.find(
+    (nivel) => nivel.title.toLowerCase() === param.toLowerCase()
+  );
+  if (!data) return null;
   return (
-    
-<section className=" py-8">
+    <>
+      <div className="text-center ">
+        <Title order={1} fw={800} td="underline" c={data?.color}>
+          {param.toUpperCase()}
+        </Title>
+      </div>
 
-    <div className="container mx-auto text-center px-4">
-   
-        <div className="flex flex-wrap -mx-4">
-            <div className="w-full md:w-1/3 px-4 mb-8">
-                <div className="bg-white p-8 shadow-md rounded-md">
+      <section className=" py-6 ">
+        <div className="container mx-auto text-center px-4">
+          <div className="flex flex-wrap -mx-4">
+            {data.documents?.map((document) => (
+              <div key={document.nombre} className="w-full md:w-1/3 px-4 mb-8">
+                <div className=" p-8 shadow-md rounded-md  ">
                   <div className="flex justify-center items-center mb-4">
-                    <IconWritingSign
-                      style={{ width: (80), height: (80) }}
-                      color="#f018e8" 
-                      />
-                      </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Inscripciones</h3>
-                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    {isValidElement(document.icon) ? (
+                      React.cloneElement(document.icon as React.ReactElement, {
+                        style: iconStyle,
+                        color: document.color || "red",
+                      })
+                    ) : (
+                      <span>No Icon</span> // Maneja el caso en el que el icono no está definido
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">
+                    {document.nombre}
+                  </h3>
+               
+                  <Button
+                    variant="outline"
+                    onClick={() => window.open("/mi-documento.pdf")}
+                  
+                    radius="lg"
+                    size="xs" 
+                  >
+                    Descargar
+                  </Button>
                 </div>
-            </div>
-            <div className="w-full md:w-1/3 px-4 mb-8">
-                <div className="bg-white p-8 shadow-md rounded-md  ">
-                  <div className="flex justify-center items-center mb-4">
-                    <IconArticle
-                      style={{ width: (80), height: (80) }}
-                      color="#6672b0"
-                      />
-                      </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Mensualidades</h3>
-                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div className="w-full md:w-1/3 px-4 mb-8">
-                <div className="bg-white p-8 shadow-md rounded-md  ">
-                  <div className="flex justify-center items-center mb-4">
-                    <IconSchool
-                      style={{ width: (80), height: (80) }}
-                      color="var(--mantine-color-blue-filled)"
-                      />
-                      </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Oferta Educativa</h3>
-                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            
-          
-        
+              </div>
+            ))}
+          </div>
         </div>
-    </div>
-</section>
-    
-  )
-}
+      </section>
+    </>
+  );
+};
