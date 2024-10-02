@@ -37,7 +37,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
       icon: (
         <IconHome
           className="mr-2"
-          size={isXs ? 40 : 22}
+          size={isXs ? 30 : 22}
           color={isDark ? "#47AB8D" : "#9f6c04"}
         />
       ),
@@ -48,7 +48,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
       icon: (
         <IconUsersGroup
           className="mr-2"
-          size={isXs ? 40 : 22}
+          size={isXs ? 30 : 22}
           color={iconColor}
         />
       ),
@@ -59,7 +59,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
       icon: (
         <IconBuildingEstate
           className="mr-2"
-          size={isXs ? 40 : 22}
+          size={isXs ? 30 : 22}
           color={iconColor}
         />
       ),
@@ -69,7 +69,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
 
     {
       icon: (
-        <IconMap2 className="mr-2" size={isXs ? 40 : 22} color={iconColor} />
+        <IconMap2 className="mr-2" size={isXs ? 30 : 22} color={iconColor} />
       ),
       label: "Mapa",
       href: "/map",
@@ -78,7 +78,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
       icon: (
         <IconMessageDots
           className="mr-2"
-          size={isXs ? 40 : 22}
+          size={isXs ? 30 : 22}
           color={iconColor}
         />
       ),
@@ -89,7 +89,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
       icon: (
         <IconBallpenFilled
           className="mr-2"
-          size={isXs ? 40 : 22}
+          size={isXs ? 30 : 22}
           color={iconColor}
         />
       ),

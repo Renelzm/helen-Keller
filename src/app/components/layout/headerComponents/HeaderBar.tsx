@@ -28,7 +28,7 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
         className={`${isDark ? "bg-yellow-600" : "bg-green-700"}`}
         style={{ position: "relative"}}
         >
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color="white" />
      
         <Image onClick={toggleDesk} src={`/helen-keller/bwlog.png`} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
         <Link href={'/'}>
