@@ -11,7 +11,6 @@ const nextConfig = {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },
     images: {
-      path: '/helen-keller',
     remotePatterns: [
       {
         protocol: 'https',

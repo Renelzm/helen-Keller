@@ -30,7 +30,7 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
         >
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
      
-        <Image onClick={toggleDesk} src={`/bwlog.png`} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
+        <Image onClick={toggleDesk} src={`/hellen-keller/bwlog.png`} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
         <Link href={'/'}>
         <Title order={3} c="#effee7" td="underline" fw={900} visibleFrom="sm">{nombre}</Title>
         </Link> 
