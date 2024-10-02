@@ -141,7 +141,7 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
           onClick={() =>
             handleClick("https://edi-unoi-mx.stn-neds.com/ts/view/access")
           }
-          className="flex p-2  mt-2 rounded-xl border  py-2 px-4 text-center  text-sm hover:opacity-90 max-w-xs transition duration-300 ease-in-out hover:scale-125 group-hover:w-full  focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          className="flex items-center p-1.5 mt-3 rounded-lg border py-1 px-3 text-center text-xs hover:opacity-90 max-w-xs transition duration-300 ease-in-out hover:scale-110 group-hover:w-full focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         >
           <IconDoorEnter color="white" className=" mr-2" />
           <Title order={isXs ? 3 : 5} c={"white"}>
@@ -153,13 +153,14 @@ export const HeaderLateral = ({ toggle, toggleDesk, isDark }: Props) => {
           onClick={() =>
             handleClick("https://payment.uno-internacional.com/mx/unoi/welcome")
           }
-          className="flex p-2  mt-2 rounded-xl border  py-2 px-4 text-center  text-sm hover:opacity-90 max-w-xs transition duration-300 ease-in-out hover:scale-125 group-hover:w-full  focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+  className="flex items-center p-1.5 mt-3 rounded-lg border py-1 px-3 text-center text-xs hover:opacity-90 max-w-xs transition duration-300 ease-in-out hover:scale-110 group-hover:w-full focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           >
           <IconCash color="white" className=" mr-2" />
-          <Title order={isXs ? 3 : 5} c={"white"}>
+          <Title order={isXs ? 3 : 6} c={"white"}>
             Pagos-Uno
           </Title>
         </button>
+
       </div>
     </>
   );
