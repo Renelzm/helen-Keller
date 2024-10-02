@@ -6,13 +6,12 @@ const nextConfig = {
     basePath: isProd ? '/helen-keller' : '',
     reactStrictMode: true,
     swcMinify: true,
-    output: 'export',
+    // output: 'export',
     experimental: {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },
     images: {
-      loader: "custom",
-      loaderFile: './ImageLoader.js',
+      path: '/helen-keller',
     remotePatterns: [
       {
         protocol: 'https',
