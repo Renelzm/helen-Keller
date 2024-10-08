@@ -73,7 +73,7 @@ export const MainHeaderShell = ({ children }: HeaderShellProps) => {
         <AppShell.Main>
          
 
-          <div className={ isXs ? "mt-28" : "mt-20"} >{children} </div>
+          <div className={ isXs ? "mt-40" : "mt-20"} >{children} </div>
         </AppShell.Main>
         <AppShell.Footer p="xs" >
           <FooterCentered />

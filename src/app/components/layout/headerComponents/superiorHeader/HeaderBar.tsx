@@ -59,7 +59,8 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
       
         
       </Group>
-      <div style={{ backgroundColor: "#153d80", color:'white', position: "relative"}} className=" text-center">Juntos construimos la alegría de aprender</div>
+      { !isDark ? <div style={{ backgroundColor: "#153d80", color:'white', position: "relative"}} className=" text-center">Juntos construimos la alegría de aprender</div> : ""}
+      {/* <div style={{ backgroundColor: "#153d80", color:'white', position: "relative"}} className=" text-center">Juntos construimos la alegría de aprender</div> */}
       <NavigationBar/> 
 
     </AppShell.Header>
