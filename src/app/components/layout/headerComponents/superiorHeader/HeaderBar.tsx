@@ -24,12 +24,17 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
   return (
     <>
     <AppShell.Header >
+    
+    
       <Group
         h="100%"
         px="md"
         className={`${isDark ? "bg-yellow-600" : "bg-green-700"}`}
-        style={{ position: "relative"}}
-        >
+        style={{ position: "relative", boxShadow: isDark ? 'inset 0px -4px 6px #845902' : 'inset 0px -4px 6px #044c1e' }} 
+        // #CA8A04
+      >
+            
+
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" color="white" />
      
         <Image onClick={toggleDesk} src={`/helen-keller/59e76b0d8c18a.png`} width={60} height={40} alt="Logo"  style={{ cursor: 'pointer' }}  className="hover:opacity-75 transition-opacity duration-200 ml-7" />
@@ -51,10 +56,12 @@ export const HeaderBar = ({ opened, toggle, toggleDesk }: Props) => {
           )}
         </ActionIcon>
  
-     
+      
         
       </Group>
+      {/* <div style={{ backgroundColor: "#153d80", color:'white', position: "relative"}} className=" text-center">Juntos construimos la alegría de aprender</div> */}
       <NavigationBar/> 
+
     </AppShell.Header>
 
           </>

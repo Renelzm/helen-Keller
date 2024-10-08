@@ -3,8 +3,8 @@
 import { AppShell, useMantineColorScheme } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { ReactNode } from "react";
-import { HeaderBar } from "./headerComponents/HeaderBar";
-import { FooterCentered } from "./headerComponents/footerCentered";
+import { HeaderBar } from "./headerComponents/superiorHeader/HeaderBar";
+import { FooterCentered } from "./headerComponents/footer/footerCentered";
 import { HeaderLateral } from './headerComponents/HeaderLateral';
 
 interface HeaderShellProps {
@@ -19,22 +19,23 @@ export const MainHeaderShell = ({ children }: HeaderShellProps) => {
   const isDark = colorScheme === "dark";
   return (
     <>
+  
       <AppShell
-        header={{ height: 90 }}
+        header={{ height: 65 }}
         navbar={{
           width: 200,
           breakpoint: "sm",
           collapsed: { mobile: !opened, desktop: !desktopOpened },
-    
+          
         }}
         footer={{ height: 70 }}
         padding="md"
         styles={(theme) => ({
           header: {
-            backgroundColor: theme.colors.blue[6], // Ensure a single color is used
+            backgroundColor: theme.colors.blue[6], border: 0, // Ensure a single color is used
           },
           navbar: {
-            backgroundColor: !isDark ? "#CA8A04" : theme.colors.dark[7], // Dark mode conditional styling
+            backgroundColor: !isDark ? "#CA8A04" : theme.colors.dark[7], boxShadow: "inset 0px 10px 20px 0 rgba(20, 20, 20, 0.2)"// Dark mode conditional styling
           },
           main: {
             backgroundColor: '', // Use a single valid color for the background
@@ -50,10 +51,10 @@ export const MainHeaderShell = ({ children }: HeaderShellProps) => {
           toggle={toggle}
           desktopOpened={desktopOpened}
           toggleDesk={toggleDesktop}
+
         />
-      
-        
-        <AppShell.Navbar p="md">
+    
+        <AppShell.Navbar p="md" >
        
          
           <HeaderLateral 
@@ -65,12 +66,7 @@ export const MainHeaderShell = ({ children }: HeaderShellProps) => {
           />
          
          
-          {/* {Array(15)
-            .fill(0)
-            .map((_, index) => (
-              <Skeleton key={index} h={28} mt="sm" animate={true} />
-            ))} */}
-
+    
      
         </AppShell.Navbar>
 
