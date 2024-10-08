@@ -4,7 +4,8 @@ import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 
 import { MainHeaderShell } from "./components/layout/MainHeaderShell";
-import { Providers } from "@/store/Providers";
+import { Providers } from "./Providers";
+
 
 
 export const metadata = {
@@ -18,13 +19,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
       
-    <html lang="en">
+    <html lang="es" data-mantine-color-scheme="light">
+    
       <body>
-   
+
         <Providers>
       <MainHeaderShell>
+        
         {children}    
       </MainHeaderShell>
         </Providers>

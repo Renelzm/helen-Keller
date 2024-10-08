@@ -25,7 +25,7 @@ export const MainHeaderShell = ({ children }: HeaderShellProps) => {
         navbar={{
           width: 200,
           breakpoint: "sm",
-          collapsed: { mobile: !opened, desktop: !desktopOpened },
+          collapsed: { mobile: !opened, desktop: desktopOpened },
           
         }}
         footer={{ height: 70 }}

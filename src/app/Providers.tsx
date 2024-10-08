@@ -2,9 +2,10 @@
 
 
 import { Provider } from 'react-redux';
-import { store } from '.';
+import { store } from '../store';
 import { MantineProvider } from '@mantine/core';
 import { theme } from '../../theme';
+
 
 
 interface Props {
@@ -12,9 +13,11 @@ interface Props {
   
 }
 export const Providers = ({children} : Props)  => {
+
   return (
     <Provider store={store}>
-      <MantineProvider theme={theme}>
+      <MantineProvider theme={theme} defaultColorScheme='light'>
+        
         {children}
       </MantineProvider>
     </Provider>
